@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="816.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChartFromController">
+   <children>
+      <ScrollPane layoutX="7.0" layoutY="77.0" prefHeight="663.0" prefWidth="671.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="686.0" prefWidth="667.0" style="-fx-background-color: white; -fx-border-color: white;">
+               <children>
+                  <AnchorPane fx:id="showBar" layoutY="462.0" prefHeight="135.0" prefWidth="57.0" visible="false">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="50.0" onMouseClicked="#addImgOnAction" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8-camera-96.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="91.0" onMouseClicked="#addFileOnAction" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8-file-96.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="7.0" onMouseClicked="#hideShoeBar" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8-close-96.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <TextField fx:id="smsTexFeld" layoutX="52.0" layoutY="757.0" onAction="#sendUserOnAction" prefHeight="31.0" prefWidth="530.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <ImageView fx:id="account" fitHeight="42.0" fitWidth="50.0" layoutX="7.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-account-96.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="13.0" layoutY="758.0" onMouseClicked="#showBarOnAction" onMouseEntered="#show" onMouseExited="#hide" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-attach-50.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="user_name" layoutX="69.0" layoutY="35.0" prefHeight="21.0" prefWidth="354.0" text="name">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

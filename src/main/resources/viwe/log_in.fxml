@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="571.0" prefWidth="372.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LogInController">
+   <children>
+      <ImageView fitHeight="69.0" fitWidth="88.0" layoutX="152.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-computer-chat.gif" />
+         </image>
+      </ImageView>
+      <TextField alignment="CENTER" layoutX="76.0" layoutY="218.0" prefHeight="31.0" prefWidth="220.0" promptText="user name" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 4;">
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField alignment="CENTER" layoutX="76.0" layoutY="282.0" prefHeight="31.0" prefWidth="220.0" promptText="password" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 4;">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+      <JFXButton layoutX="143.0" layoutY="352.0" prefHeight="29.0" prefWidth="86.0" style="-fx-background-color: #373778;" text="Log in" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="51.0" layoutY="421.0" prefHeight="25.0" prefWidth="271.0" text="Don not Have Account.Go to Register">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label alignment="CENTER" layoutX="124.0" layoutY="446.0" prefHeight="25.0" prefWidth="125.0" text="Go to Register">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </children>
+</AnchorPane>
