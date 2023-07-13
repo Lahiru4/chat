@@ -146,15 +146,13 @@ public class ChartFromController implements Initializable {
     private void setImg(byte[] blob) {
         Platform.runLater(new Runnable() {
             public void run() {
-                System.out.println("set img");
-                System.out.println("set img run");
                 Image image = new Image(new ByteArrayInputStream(blob));
                 ImageView imageView = new ImageView(image);
                 imageView.setFitWidth(100);
                 imageView.setFitHeight(100);
                 imageView.setLayoutX(400);
                 imageView.setLayoutY(y);
-                //y+=140;
+                y+=140;
                 sms_area.getChildren().add(imageView);
                 scroller_area.setVvalue(1.0);
             }

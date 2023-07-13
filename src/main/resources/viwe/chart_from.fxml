@@ -7,41 +7,13 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="mean" prefHeight="816.0" prefWidth="1007.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChartFromController">
    <children>
-      <ScrollPane fx:id="scroller_area" layoutX="328.0" layoutY="77.0" prefHeight="663.0" prefWidth="671.0">
+      <ScrollPane fx:id="scroller_area" layoutX="328.0" layoutY="77.0" prefHeight="635.0" prefWidth="671.0">
          <content>
-            <AnchorPane fx:id="sms_area" prefHeight="662.0" prefWidth="669.0" style="-fx-background-color: white;">
-               <children>
-                  <AnchorPane fx:id="showBar" layoutY="494.0" prefHeight="186.0" prefWidth="61.0" visible="false">
-                     <children>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="16.0" layoutY="17.0" onMouseClicked="#hideShoeBar" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../img/icons8-close-96.png" />
-                           </image>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="16.0" layoutY="109.0" onMouseClicked="#addImgOnAction" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../img/icons8-camera-96.png" />
-                           </image>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="16.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../img/icons8-file-96.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-               </children></AnchorPane>
+            <AnchorPane fx:id="sms_area" prefHeight="632.0" prefWidth="669.0" style="-fx-background-color: white;" />
          </content>
       </ScrollPane>
       <TextField fx:id="smsTexFeld" layoutX="368.0" layoutY="757.0" onAction="#sendUserOnAction" prefHeight="31.0" prefWidth="530.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10;">
@@ -70,6 +42,30 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <VBox layoutX="-1.0" prefHeight="816.0" prefWidth="328.0" />
+      <AnchorPane fx:id="showBar" layoutX="331.0" layoutY="722.0" prefHeight="31.0" prefWidth="241.0" visible="false">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="173.0" onMouseClicked="#hideShoeBar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-close-96.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="25.0" layoutY="-1.0" onMouseClicked="#addImgOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-camera-96.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="101.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-file-96.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
