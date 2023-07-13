@@ -21,7 +21,7 @@ public class UserDAOImpl implements UserDAO {
             String password = resultSet.getString("password");
 
 
-            UserDTO userDTO = new UserDTO(id, frist_namename, last_name, password);
+            UserDTO userDTO = new UserDTO(id, frist_namename+last_name, password);
             all.add(userDTO);
         }
         return all;
@@ -31,7 +31,7 @@ public class UserDAOImpl implements UserDAO {
     public boolean add(UserDTO userDTO) throws SQLException, ClassNotFoundException {
         String sql = "INSERT INTO user (id, frist_name, last_name, password) " +
                 "VALUES (?, ?, ?, ?)";
-        int rowsAffected = CrudUtil.execute(sql,userDTO.getId(),userDTO.getFrist_name(),userDTO.getLast_name(),userDTO.getPassword());
+        int rowsAffected = CrudUtil.execute(sql,userDTO.getId(),userDTO.getName(),userDTO.getName(),userDTO.getPassword());
         return rowsAffected > 0;
     }
 
