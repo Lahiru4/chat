@@ -122,7 +122,6 @@ public class ChartFromController implements Initializable {
                 byte[] blob = imagenToByte(image);
                 sendImg(blob);
                 setMyImg(image);
-
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -203,7 +202,7 @@ public class ChartFromController implements Initializable {
             OutputStream outputStream = socket.getOutputStream();
             dataOutputStream = new DataOutputStream(outputStream);
             dataInputStream = new DataInputStream(socket.getInputStream());
-            user_name.setText("eeeeeeeeeeeeeeee");
+            user_name.setText("Kumara");
             sendSaverUserName();
         } catch (IOException e) {
             e.printStackTrace();
